@@ -9,4 +9,10 @@ import UIKit
 
 class UpcomingCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
+    
+    static let cellIdentifier = "upcomingCell"
+
 }

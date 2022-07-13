@@ -11,4 +11,6 @@ class PopularCollectionViewCell: UICollectionViewCell {
     @IBOutlet var image: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     
+    static let cellIdentifier = "popularCell"
+    
 }

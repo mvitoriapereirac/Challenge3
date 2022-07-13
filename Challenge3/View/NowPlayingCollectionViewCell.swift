@@ -12,4 +12,7 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var image: UIImageView!
+    
+    static let cellIdentifier = "nowPlayingCell"
+
 }
