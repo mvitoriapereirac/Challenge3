@@ -20,6 +20,8 @@
 		BC4A15F5287DF52B00000E95 /* Movie+NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A15F0287DF52A00000E95 /* Movie+NowPlaying.swift */; };
 		BC4A15F6287DF52B00000E95 /* Movie+TrendingThisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A15F1287DF52A00000E95 /* Movie+TrendingThisWeek.swift */; };
 		BC4A15F8287E144B00000E95 /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A15F7287E144B00000E95 /* FeaturedViewController+UICollectionViewDataSource.swift */; };
+		BC4A15FA287F3EFE00000E95 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A15F9287F3EFE00000E95 /* DetailsViewController.swift */; };
+		BC4A15FC287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A15FB287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift */; };
 		BCF4FDB7287C99AB00FB8E9B /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4FDB6287C99AB00FB8E9B /* PopularCollectionViewCell.swift */; };
 		BCF4FDB9287C99E400FB8E9B /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4FDB8287C99E400FB8E9B /* NowPlayingCollectionViewCell.swift */; };
 		BCF4FDBC287C9CDF00FB8E9B /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4FDBB287C9CDF00FB8E9B /* UpcomingCollectionViewCell.swift */; };
@@ -41,6 +43,8 @@
 		BC4A15F0287DF52A00000E95 /* Movie+NowPlaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+NowPlaying.swift"; sourceTree = "<group>"; };
 		BC4A15F1287DF52A00000E95 /* Movie+TrendingThisWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingThisWeek.swift"; sourceTree = "<group>"; };
 		BC4A15F7287E144B00000E95 /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		BC4A15F9287F3EFE00000E95 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		BC4A15FB287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		BCF4FDB6287C99AB00FB8E9B /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		BCF4FDB8287C99E400FB8E9B /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BCF4FDBB287C9CDF00FB8E9B /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 			children = (
 				BC2C39DE2874AEBB008854CE /* FeaturedViewController.swift */,
 				BC4A15F7287E144B00000E95 /* FeaturedViewController+UICollectionViewDataSource.swift */,
+				BC4A15F9287F3EFE00000E95 /* DetailsViewController.swift */,
+				BC4A15FB287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +217,8 @@
 				BC4A15F2287DF52B00000E95 /* Movie+Upcoming.swift in Sources */,
 				BC2C39DF2874AEBB008854CE /* FeaturedViewController.swift in Sources */,
 				BC4A15F6287DF52B00000E95 /* Movie+TrendingThisWeek.swift in Sources */,
+				BC4A15FC287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
+				BC4A15FA287F3EFE00000E95 /* DetailsViewController.swift in Sources */,
 				BC2C39DB2874AEBB008854CE /* AppDelegate.swift in Sources */,
 				BC2C39DD2874AEBB008854CE /* SceneDelegate.swift in Sources */,
 			);

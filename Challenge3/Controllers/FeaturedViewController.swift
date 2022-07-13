@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeaturedViewController: UIViewController, UICollectionViewDelegate {
+class FeaturedViewController: UIViewController {
     
     
     
@@ -25,14 +25,24 @@ class FeaturedViewController: UIViewController, UICollectionViewDelegate {
         nowPlayingCollectionView.dataSource = self
         upcomingCollectionView.dataSource = self
         
+        popularCollectionView.delegate = self
+        nowPlayingCollectionView.delegate = self
+        upcomingCollectionView.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController {
+            let movie = sender as? Movie
+            destination.movie = movie
+        }
+
+    }
 
     
     
-    
+   
 }
 
