@@ -13,4 +13,8 @@ class PopularCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "popularCell"
     
+    func setup (title: String, image: UIImage) {
+        titleLabel.text = title
+        self.image.image = image
+    }
 }
