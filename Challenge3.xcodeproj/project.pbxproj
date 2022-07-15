@@ -22,6 +22,7 @@
 		BC4A15F8287E144B00000E95 /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A15F7287E144B00000E95 /* FeaturedViewController+UICollectionViewDataSource.swift */; };
 		BC4A15FA287F3EFE00000E95 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A15F9287F3EFE00000E95 /* DetailsViewController.swift */; };
 		BC4A15FC287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A15FB287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift */; };
+		BCE7C0332881E8AC0092B06B /* TMDB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE7C0322881E8AC0092B06B /* TMDB-Info.plist */; };
 		BCF4FDB7287C99AB00FB8E9B /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4FDB6287C99AB00FB8E9B /* PopularCollectionViewCell.swift */; };
 		BCF4FDB9287C99E400FB8E9B /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4FDB8287C99E400FB8E9B /* NowPlayingCollectionViewCell.swift */; };
 		BCF4FDBC287C9CDF00FB8E9B /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4FDBB287C9CDF00FB8E9B /* UpcomingCollectionViewCell.swift */; };
@@ -45,6 +46,7 @@
 		BC4A15F7287E144B00000E95 /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		BC4A15F9287F3EFE00000E95 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BC4A15FB287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		BCE7C0322881E8AC0092B06B /* TMDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMDB-Info.plist"; sourceTree = "<group>"; };
 		BCF4FDB6287C99AB00FB8E9B /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		BCF4FDB8287C99E400FB8E9B /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BCF4FDBB287C9CDF00FB8E9B /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				BC2C39E82874AEBC008854CE /* Info.plist */,
 				BC2C39E32874AEBC008854CE /* Assets.xcassets */,
+				BCE7C0322881E8AC0092B06B /* TMDB-Info.plist */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC2C39E72874AEBC008854CE /* LaunchScreen.storyboard in Resources */,
+				BCE7C0332881E8AC0092B06B /* TMDB-Info.plist in Resources */,
 				BC2C39E42874AEBC008854CE /* Assets.xcassets in Resources */,
 				BC2C39E22874AEBB008854CE /* Main.storyboard in Resources */,
 			);
