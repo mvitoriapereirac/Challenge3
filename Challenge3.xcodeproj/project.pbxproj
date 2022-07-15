@@ -23,6 +23,8 @@
 		BC4A15FA287F3EFE00000E95 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A15F9287F3EFE00000E95 /* DetailsViewController.swift */; };
 		BC4A15FC287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A15FB287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift */; };
 		BCE7C0332881E8AC0092B06B /* TMDB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE7C0322881E8AC0092B06B /* TMDB-Info.plist */; };
+		BCE7C0352881ECA50092B06B /* Movie+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7C0342881ECA50092B06B /* Movie+API.swift */; };
+		BCE7C0372881F8D40092B06B /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE7C0362881F8D40092B06B /* MoviesResponse.swift */; };
 		BCF4FDB7287C99AB00FB8E9B /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4FDB6287C99AB00FB8E9B /* PopularCollectionViewCell.swift */; };
 		BCF4FDB9287C99E400FB8E9B /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4FDB8287C99E400FB8E9B /* NowPlayingCollectionViewCell.swift */; };
 		BCF4FDBC287C9CDF00FB8E9B /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF4FDBB287C9CDF00FB8E9B /* UpcomingCollectionViewCell.swift */; };
@@ -47,6 +49,8 @@
 		BC4A15F9287F3EFE00000E95 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BC4A15FB287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		BCE7C0322881E8AC0092B06B /* TMDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMDB-Info.plist"; sourceTree = "<group>"; };
+		BCE7C0342881ECA50092B06B /* Movie+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+API.swift"; sourceTree = "<group>"; };
+		BCE7C0362881F8D40092B06B /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
 		BCF4FDB6287C99AB00FB8E9B /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		BCF4FDB8287C99E400FB8E9B /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BCF4FDBB287C9CDF00FB8E9B /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -95,12 +99,14 @@
 		BC4A15EA287DEDF600000E95 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BCE7C0342881ECA50092B06B /* Movie+API.swift */,
 				BC4A15F0287DF52A00000E95 /* Movie+NowPlaying.swift */,
 				BC4A15EE287DF52A00000E95 /* Movie+Popular.swift */,
 				BC4A15F1287DF52A00000E95 /* Movie+TrendingThisWeek.swift */,
 				BC4A15EF287DF52A00000E95 /* Movie+TrendingToday.swift */,
 				BC4A15ED287DF52A00000E95 /* Movie+Upcoming.swift */,
 				BC4A15EB287DEE4800000E95 /* Movie.swift */,
+				BCE7C0362881F8D40092B06B /* MoviesResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,8 +229,10 @@
 				BC4A15F6287DF52B00000E95 /* Movie+TrendingThisWeek.swift in Sources */,
 				BC4A15FC287F47DE00000E95 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
 				BC4A15FA287F3EFE00000E95 /* DetailsViewController.swift in Sources */,
+				BCE7C0372881F8D40092B06B /* MoviesResponse.swift in Sources */,
 				BC2C39DB2874AEBB008854CE /* AppDelegate.swift in Sources */,
 				BC2C39DD2874AEBB008854CE /* SceneDelegate.swift in Sources */,
+				BCE7C0352881ECA50092B06B /* Movie+API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
