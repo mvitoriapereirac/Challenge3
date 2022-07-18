@@ -9,10 +9,14 @@ import Foundation
 
 extension Movie {
     static let urlComponents = URLComponents(string: "https://api.themoviedb.org/")!
-    //MARK: -  Download de Populares
-    static func popularMoviesAPI() async -> [Movie] {
+    
+    
+    //MARK: -  Download de APIs
+    fileprivate static func downloadAPI(path: String) async -> [Movie] {
+        
         var components = Movie.urlComponents
-        components.path = "/3/movie/popular"
+        components.path = path
+        
         components.queryItems = [
             URLQueryItem(name: "api_key", value: Movie.apiKey)
         ]
@@ -29,24 +33,44 @@ extension Movie {
             return movieResult.results
             
         } catch {
-            
-            print(error)
+            print(error.localizedDescription)
+            return []
             
         }
-        
-        return []
     }
     
+    //MARK: -  Download de Populares
+    static func popularMoviesAPI() async -> [Movie] {
+        let path: String = "/3/movie/popular"
+        return await downloadAPI(path: path)
+        
+        
+    }
+    
+    //MARK: - Download de Now Playing
+    static func nowPlayingAPI() async -> [Movie] {
+        let path: String = "/3/movie/now_playing"
+        return await downloadAPI(path: path)
+        
+    }
+    
+    //MARK: - Download de Upcoming
+    static func upcomingAPI() async -> [Movie] {
+        let path: String = "/3/movie/upcoming"
+        return await downloadAPI(path: path)
+        
+    }
     //MARK: - Download de Imagens
     static func downloadImageData(withPath: String) async -> Data {
         let urlString = "https://image.tmdb.org/t/p/w780\(withPath)"
         let url: URL = URL(string: urlString)!
         let session = URLSession.shared
+        
         do {
             let (data, response) = try await session.data(from: url)
             return data
         } catch {
-            print(error)
+            print(error.localizedDescription)
         }
         
         

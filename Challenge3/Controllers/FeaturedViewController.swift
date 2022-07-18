@@ -16,8 +16,8 @@ class FeaturedViewController: UIViewController {
     @IBOutlet weak var popularCollectionView: UICollectionView!
     
     var popularMovies: [Movie] = [] //Movie.popularMovies()
-    let nowPlayingMovies = Movie.nowPlayingMovies()
-    let upcomingMovies = Movie.upcomingMovies()
+    var nowPlayingMovies: [Movie] = []  //Movie.nowPlayingMovies()
+    var upcomingMovies: [Movie] = [] //Movie.upcomingMovies()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,16 @@ class FeaturedViewController: UIViewController {
         Task {
             popularMovies = await Movie.popularMoviesAPI()
             self.popularCollectionView.reloadData()
+        }
+        
+        Task {
+            nowPlayingMovies = await Movie.nowPlayingAPI()
+            self.nowPlayingCollectionView.reloadData()
+        }
+        
+        Task {
+            upcomingMovies = await Movie.upcomingAPI()
+            self.upcomingCollectionView.reloadData()
         }
         // Do any additional setup after loading the view.
     }
