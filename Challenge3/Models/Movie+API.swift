@@ -60,6 +60,93 @@ extension Movie {
         return await downloadAPI(path: path)
         
     }
+    //MARK: - Download de Search
+    static func searchAPI(search: String) async -> [Movie] {
+
+                var components = Movie.urlComponents
+                components.path = "/3/search/movie"
+                components.queryItems = [
+                    URLQueryItem(name : "api_key", value : Movie.apiKey),
+                    URLQueryItem(name : "query", value : search)
+                ]
+                
+                let session = URLSession.shared
+                
+                do {
+                    let (data, _) = try await session.data(from: components.url!)
+                    
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    
+                    let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+                    print("\(movieResult.results.count) filmes no MovieResponse")
+                    return movieResult.results
+                    
+                
+                } catch {
+                    //print(error)
+                    print("Deu ruim no searchMovies")
+                }
+                // se der erro no do, retorna uma lista vazia
+                return []
+    }
+    
+    
+    //MARK: - Trending day download
+    
+    static func trendingDayMoviesAPI() async -> [Movie] {
+        var components = Movie.urlComponents
+        components.path = "/3/trending/movie/day"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
+        
+        let session = URLSession.shared
+        
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+            
+            return movieResult.results
+            
+        } catch {
+            print(error)
+        }
+        
+        return []
+    }
+    
+    //MARK: - Trending week download
+    
+    static func trendingWeekMoviesAPI() async -> [Movie] {
+        var components = Movie.urlComponents
+        components.path = "/3/trending/movie/week"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
+        
+        let session = URLSession.shared
+        
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+            
+            return movieResult.results
+            
+        } catch {
+            print(error)
+        }
+        
+        return []
+    }
     //MARK: - Download de Imagens
     static func downloadImageData(withPath: String) async -> Data {
         let urlString = "https://image.tmdb.org/t/p/w780\(withPath)"
@@ -76,7 +163,7 @@ extension Movie {
         
         return Data()
     }
-
+    
     // MARK: - Recuperando a chave da API de um arquivo
     static var apiKey: String {
         guard let url = Bundle.main.url(forResource: "TMDB-Info", withExtension: "plist") else {

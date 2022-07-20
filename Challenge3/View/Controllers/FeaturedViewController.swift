@@ -20,7 +20,8 @@ class FeaturedViewController: UIViewController {
     var upcomingMovies: [Movie] = [] //Movie.upcomingMovies()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
+        sleep(2)
         popularCollectionView.dataSource = self
         nowPlayingCollectionView.dataSource = self
         upcomingCollectionView.dataSource = self
