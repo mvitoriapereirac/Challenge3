@@ -42,8 +42,11 @@ class DetailsViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AmplifyViewController {
+            destination.img = posterImage.image
+        }
 
-    
-  
 
+}
 }

@@ -21,7 +21,7 @@ class FeaturedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad() 
-        sleep(2)
+        sleep(3)
         popularCollectionView.dataSource = self
         nowPlayingCollectionView.dataSource = self
         upcomingCollectionView.dataSource = self

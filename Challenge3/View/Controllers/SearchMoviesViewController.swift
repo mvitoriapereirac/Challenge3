@@ -17,11 +17,14 @@ class SearchMoviesViewController: UIViewController, UISearchResultsUpdating {
         
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
-        searchController.searchBar.placeholder = "Movie title"
+        searchController.searchBar.placeholder = "Busca por título"
         
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func amplifyPoster(_ sender: Any) {
+        performSegue(withIdentifier: "amplifyImage", sender: amplifyPoster(_:))
+    }
     var searchController = UISearchController()
     var searchMovies: [Movie] = []
     
