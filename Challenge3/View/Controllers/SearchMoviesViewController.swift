@@ -72,7 +72,7 @@ extension SearchMoviesViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = resultsSearchTableView.dequeueReusableCell(withIdentifier: "resultsSearch", for: indexPath) as? SearchTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "resultsSearch", for: indexPath) as? SearchTableViewCell {
             let title = searchMovies[indexPath.item].title
             let year = String(searchMovies[indexPath.item].releaseDate.prefix(4))
             let image = UIImage()
