@@ -14,9 +14,11 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     
     func setup(image: UIImage, year: String, title: String) {
-        imageMovie.image = image
+        self.imageMovie.image = image
         dateLabel.text = year
         titleLabel.text = title
+        print("title \(title)")
+        
     }
    
     override func awakeFromNib() {

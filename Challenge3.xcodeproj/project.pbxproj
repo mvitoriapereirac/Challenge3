@@ -95,6 +95,7 @@
 				BC4A15EA287DEDF600000E95 /* Models */,
 				BC2C39DA2874AEBB008854CE /* AppDelegate.swift */,
 				BC2C39DC2874AEBB008854CE /* SceneDelegate.swift */,
+				BCF4FDB5287C994000FB8E9B /* Controllers */,
 				BCF4FDBA287C9AFD00FB8E9B /* View */,
 				BCF4FDBD287C9E5200FB8E9B /* SupportingFiles */,
 			);
@@ -138,7 +139,6 @@
 				BCF4FDB8287C99E400FB8E9B /* NowPlayingCollectionViewCell.swift */,
 				BC62425E288754F8009B9354 /* SearchTableViewCell.swift */,
 				BCEAB63628885CDC00D051D7 /* LaunchScreen.storyboard */,
-				BCF4FDB5287C994000FB8E9B /* Controllers */,
 			);
 			path = View;
 			sourceTree = "<group>";

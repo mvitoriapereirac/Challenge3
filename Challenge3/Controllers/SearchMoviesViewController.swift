@@ -32,8 +32,11 @@ class SearchMoviesViewController: UIViewController, UISearchResultsUpdating {
         guard let title = searchController.searchBar.text else {
             return
         }
+        
         Task {
+            print("passou na Task do search")
             self.searchMovies = await Movie.searchAPI(search: title)
+            
             resultsSearchTableView.reloadData()
             print(searchMovies)
         }
@@ -70,12 +73,16 @@ extension SearchMoviesViewController: UITableViewDelegate {
 
 extension SearchMoviesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(searchMovies.count)
+        print("contou quantos movies")
         return searchMovies.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "resultsSearch", for: indexPath) as? SearchTableViewCell {
+      
+        if let cell = resultsSearchTableView?.dequeueReusableCell(withIdentifier: "resultsSearch", for: indexPath) as? SearchTableViewCell {
+            print("entrou no if let da config da cell")
             let title = searchMovies[indexPath.item].title
             let year = String(searchMovies[indexPath.item].releaseDate.prefix(4))
             let image = UIImage()
@@ -84,14 +91,17 @@ extension SearchMoviesViewController: UITableViewDataSource {
             let movies = searchMovies[indexPath.item]
             
             Task {
-                print("passou aq")
-                let imageData = await Movie.downloadImageData(withPath: movies.posterPath )
-                let image = UIImage(data: imageData) ?? UIImage()
-                cell.setup(image: image, year: year, title: title)
+                print("passou aq na task de imagens da tableview")
+                let imageData = await Movie.downloadImageData(withPath: movies.posterPath)
+                let imagem = UIImage(data: imageData) ?? UIImage()
+                cell.setup(image: imagem, year: year, title: title)
                 resultsSearchTableView.reloadData()
+                print("o num de cels é \(searchMovies.count)")
             }
             return cell
         }
+        print("nao entrou no if let da config da cell")
+
         return UITableViewCell()
         
         

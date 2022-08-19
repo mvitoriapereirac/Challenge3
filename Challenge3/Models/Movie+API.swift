@@ -73,7 +73,7 @@ extension Movie {
                 let session = URLSession.shared
                 
                 do {
-                    let (data, _) = try await session.data(from: components.url!)
+                    let (data, response) = try await session.data(from: components.url!)
                     
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase

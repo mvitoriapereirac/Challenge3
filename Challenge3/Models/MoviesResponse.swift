@@ -9,6 +9,6 @@ import Foundation
 
 struct MoviesResponse: Codable {
     
-    let results: [Movie]
+    var results: [Movie] = []
     
 }
